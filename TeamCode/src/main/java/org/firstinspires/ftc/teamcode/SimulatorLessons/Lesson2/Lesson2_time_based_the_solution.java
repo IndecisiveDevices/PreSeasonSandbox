@@ -1,15 +1,16 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
+
 /** 
  * This file contains a solution to Lesson 2 based largely on the solution
  * provided in the VRS Simulator for Lesson 1. VRS Simulator did not provide
  * a time-based solution for Lesson 2, but this lesson was added to show
  * how there can be multiple solutions to the same problem. 
  */
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 @TeleOp(name = "Lesson2_time_based_the_solution", group = "Tutorial")
 public class Lesson2_time_based_the_solution extends LinearOpMode {
