@@ -31,33 +31,37 @@ Follow these steps to complete Level 1 using OnBot Java and the Indecisive Devic
 
 ### 1. Open the Simulator
 
-> Go to [VRS Simulator Level 1](https://www.vrobotsim.online/level1.html).
+&nbsp;&nbsp;&nbsp;&nbsp;
+Go to [VRS Simulator Level 1](https://www.vrobotsim.online/level1.html).
 
 ### 2. Launch OnBot Java
 
-> Click the **On Bot Java** button at the top of the simulator window to open the code editor.
+&nbsp;&nbsp;&nbsp;&nbsp;
+Click the **On Bot Java** button at the top of the simulator window to open the code editor.
 
 ### 3. Paste Starter Code
 
-> In the code window, paste the starter code from the [Lesson1 folder in the Indecisive Devices GitHub repository](https://github.com/IndecisiveDevices/PreSeasonSandbox/tree/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons/Lesson1).
+&nbsp;&nbsp;&nbsp;&nbsp;
+In the code window, paste the starter code from the [Lesson1 folder in the Indecisive Devices GitHub repository](https://github.com/IndecisiveDevices/PreSeasonSandbox/tree/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons/Lesson1).
 
 ### 4. Update the Code
->
-> Make the following updates:
->
-> - Initialize the back motors using the hardware map.
-> - Set the direction of the back motors.
-> - Set power to all four motors so the robot drives forward.
-> - Bonus challenge: Can you make the robot spin in a circle for 4 seconds after reaching the flag?
->
-> Look for comments like:
->
-> ```java
-> // ADD CODE CHANGES BELOW HERE
-> ```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+    Make the following updates:
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+- Initialize the back motors using the hardware map.
+- Set the direction of the back motors.
+- Set power to all four motors so the robot drives forward.
+- Bonus challenge: Can you make the robot spin in a circle for 4 seconds after reaching the flag?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+*Hint*: Look for comments like: `// ADD CODE CHANGES BELOW HERE`
 
 ### 5. ▶️ Run Your Program
 
-> - Click **Initialize Program** in the simulator.
-> - Once it changes to **Run Program**, click that too.
-> - Your robot should drive forward and raise the flag.
+- Click **Initialize Program** in the simulator.
+- Once it changes to **Run Program**, click that too.
+- Your robot should drive forward and raise the flag.
+
+![Lesson 1 Screenshot](VRS_Screenshot.png)
