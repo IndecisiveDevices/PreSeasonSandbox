@@ -1,17 +1,17 @@
 # Overview
 
-This email references a series of simulation levels designed and presented by the VRS to teach and test robotics programming skills. I’ve only checked out some of their lessons, but their simulator has some cool features to explore.
+This page references a series of simulation levels designed and presented by the VRS to teach and test robotics programming skills. I’ve only checked out some of their lessons, but their simulator has some cool features to explore.
 
 VRS Robot Simulator Beginner Lessons Website: <https://www.vrobotsim.online/levelselector.html>
 
 ## 📚 Level Breakdown
 
-- [**Level 1**](https://www.vrobotsim.online/level1.html): Drive forward and raise a flag.
-- [**Level 2**](https://www.vrobotsim.online/level2.html): Drive, turn, strafe; introduces encoders and variables.
-- [**Level 3**](https://www.vrobotsim.online/level3.html): Navigate turns and practice strafing.
-- [**Level 4**](https://www.vrobotsim.online/level4.html): Drive forward, shoot, and reload rings.
-- [**Level 5**](https://www.vrobotsim.online/level5.html): Shoot red and blue tubes.
-- [**Level 6**](https://www.vrobotsim.online/level6.html): Drive forward and stop on a line using a color sensor.
+- **Level 1**: Drive forward and raise a flag.
+- **Level 2**: Drive, turn, strafe; introduces encoders and variables.
+- **Level 3**: Navigate turns and practice strafing.
+- **Level 4**: Drive forward, shoot, and reload rings.
+- **Level 5**: Shoot red and blue tubes.
+- **Level 6**: Drive forward and stop on a line using a color sensor.
 
 ## Simulator Lesson Code
 
