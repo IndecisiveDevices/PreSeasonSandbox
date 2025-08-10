@@ -1,9 +1,10 @@
 package org.firstinspires.ftc.teamcode;
 
 /** 
- * This file contains a solution to Lesson 1 as the starter code. If you remember
- * the solution uses sleep to move the robot forward for a certain amount of time.
- * But how do we turn the robot?
+ * This file contains a solution to Lesson 2 based largely on the solution
+ * provided in the VRS Simulator for Lesson 1. VRS Simulator did not provide
+ * a time-based solution for Lesson 2, but this lesson was added to show
+ * how there can be multiple solutions to the same problem. 
  */
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
