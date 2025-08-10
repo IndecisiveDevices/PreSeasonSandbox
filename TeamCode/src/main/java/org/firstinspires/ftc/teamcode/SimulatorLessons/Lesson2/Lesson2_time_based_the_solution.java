@@ -5,16 +5,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-/** 
- * This file contains a solution to Lesson 2 based largely on the solution
- * provided in the VRS Simulator for Lesson 1. VRS Simulator did not provide
- * a time-based solution for Lesson 2, but this lesson was added to show
- * how there can be multiple solutions to the same problem. 
- */
-
-@TeleOp(name = "Lesson2_time_based_the_solution", group = "Tutorial")
-public class Lesson2_time_based_the_solution extends LinearOpMode {
-
+@TeleOp(name = "Lesson5", group = "Tutorial")
+public class Lesson1 extends LinearOpMode {
     // create DcMotor objects
     private DcMotor frontRight;
     private DcMotor frontLeft;
@@ -23,7 +15,7 @@ public class Lesson2_time_based_the_solution extends LinearOpMode {
 
     @Override
     public void runOpMode() {
-        // Initialize the hardware variables
+        // initialize hardware variables
         frontRight = hardwareMap.get(DcMotor.class, "frontRight");
         frontLeft = hardwareMap.get(DcMotor.class, "frontLeft");
         backRight = hardwareMap.get(DcMotor.class, "backRight");
@@ -33,58 +25,94 @@ public class Lesson2_time_based_the_solution extends LinearOpMode {
         frontRight.setDirection(DcMotorSimple.Direction.REVERSE);
         backRight.setDirection(DcMotorSimple.Direction.REVERSE);
 
-        // Wait for the game to start (driver presses PLAY)
+        // set mode to STOP_AND_RESET_ENCODER to set position to zero
+        frontRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        frontLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        backRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        backLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+        // set mode to RUN_TO_POSITION
+        frontRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        frontLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        backRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        backLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        // set target position
+        // Note, the VRS simulator has a bug that doesn't STOP_AND_RESET_ENCODER when like
+        // you would expect (see lines 29-32). On a "real" FTC robot, you would set the target position like this:
+        //    frontLeft.setTargetPosition(4700);
+        // However, because of the bug, we are going to set the target position
+        // to the current position plus 4700.
+        frontLeft.setTargetPosition(frontLeft.getCurrentPosition() + 4700);
+
+        // define variable for easier programming
+        int on = 0.9;
+
         waitForStart();
 
-        // Run until the end of the match (driver presses STOP)
+        // when started
         if (opModeIsActive()) {
-            // Put run blocks here.
-            frontRight.setPower(1);
-            frontLeft.setPower(1);
-            backRight.setPower(1);
-            backLeft.setPower(1);
 
-            // telemetry data displayed in terminal
-            telemetry.addData("Driving", "Forward");
-            telemetry.update();
+            // loop until reach target position
+            while (frontLeft.getCurrentPosition() < frontLeft.getTargetPosition()) {
+                frontRight.setPower(on);
+                frontLeft.setPower(on);
+                backRight.setPower(on);
+                backLeft.setPower(on);
+                // displays encoder position
+                telemetry.addData("Position", frontLeft.getCurrentPosition());
+                telemetry.update();
+                sleep(50);
+            }
 
-            // car drives for 1.55 seconds
-            sleep(1550);
+            // turn left
+            frontRight.setPower(0);
+            frontLeft.setPower(0);
+            backRight.setPower(0);
+            backLeft.setPower(0);
+            sleep(100);
+
+            // turn left
+            frontRight.setPower(0.15);
+            frontLeft.setPower(-0.15);
+            backRight.setPower(0.15);
+            backLeft.setPower(-0.15);
+            sleep(850);
+
+            // stop and reset encoder
+            frontRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            frontLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            backRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            backLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+            // set mode to RUN_TO_POSITION
+            frontRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+            frontLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+            backRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+            backLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+            // set target position
+            frontLeft.setTargetPosition(frontLeft.getCurrentPosition() + 4700); // on "real" robot, you would just use setTargetPosition(4700)
+
+            // loop until target position
+            while (frontLeft.getCurrentPosition() < frontLeft.getTargetPosition()) {
+                frontRight.setPower(on);
+                frontLeft.setPower(on);
+                backRight.setPower(on);
+                backLeft.setPower(on);
+                // display encoder position
+                telemetry.addData("Position", frontLeft.getCurrentPosition());
+                telemetry.update();
+                sleep(50);
+            }
 
             // stop car
             frontRight.setPower(0);
             frontLeft.setPower(0);
             backRight.setPower(0);
             backLeft.setPower(0);
+            sleep(2000);
 
-            // telemetry data displayed in terminal
-            telemetry.addData("Turning", "Left");
-            telemetry.update();
-
-            // Set the robot motors to a lower number than we would if
-            // we were driving forward, so it turns slowly and smoothly. 
-            // This makes it easier to predict and fine-tune how long we need
-            // to set the sleep time for.
-            frontRight.setPower(0.15);
-            frontLeft.setPower(-0.15);
-            backRight.setPower(0.15);
-            backLeft.setPower(-0.15);
-
-            // approximately 0.85 seconds to turn left. 
-            sleep(850);
-
-            // Go to flag
-            frontRight.setPower(1);
-            frontLeft.setPower(1);
-            backRight.setPower(1);
-            backLeft.setPower(1);
-
-            // telemetry data displayed in terminal
-            telemetry.addData("Driving", "Forward");
-            telemetry.update();
-
-            // car drives for 1.55 seconds
-            sleep(1550);
         }
     }
 }
