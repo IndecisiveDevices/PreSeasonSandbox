@@ -53,7 +53,7 @@ public class Lesson1_the_solution extends LinearOpMode {
             backRight.setPower(0);
             backLeft.setPower(0);
 
-            // Bonus challenge: make the robot spin in a circle for 4 seconds?
+            // Bonus challenge: make the robot spin in a circle for 4 seconds
             frontRight.setPower(1);
             frontLeft.setPower(-1);
             backRight.setPower(1);
