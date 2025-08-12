@@ -32,6 +32,8 @@ Begin with the **time-based** code. This is the easiest way to get your robot mo
 - Tell the robot to drive for a certain number of seconds
 - It moves forward, then stops when the time is up.
 
+### Instructions
+
 1. Go to the [VRS simulator](https://www.vrobotsim.online/levelselector.html) and open **Level 2**.
 2. Click **On Bot Java** to open the code editor. (see top left arrow in image below)
 3. Copy and paste the [Lesson2_time_based_starter.java](./Lesson2_time_based_starter.java) by deleting the code in the VRS coding window first, then pasting the starter code. (see image below).
@@ -52,10 +54,24 @@ Encoders are like rulers inside your robot’s motors. They measure how far the 
 
 📐 Example: “Drive forward exactly 24 inches.”
 
-### Try these files
+### How it works
 
-- `Lesson2_encoder_based_starter.java`
-- `Lesson2_encoder_based_the_solution.java`
+- You tell the robot to drive for a certain **distance**.
+- It moves forward, then stops when the **distance has been reached**.
+- Tell your robot to turn towards the flag for a number of milliseconds
+- It turns then stops when the time is up.
+- Tell the robot to drive for a certain distance
+- It moves forward, then stops when the distance has been reached.
+
+### Instructions
+
+1. Go to the [VRS simulator](https://www.vrobotsim.online/levelselector.html) and open **Level 2**.
+2. Click **On Bot Java** to open the code editor. (see top left arrow in image below)
+3. Copy and paste the [Lesson2_encoder_based_starter.java](./Lesson2_encoder_based_starter.java) by deleting the code in the VRS coding window first, then pasting the starter code. (see image below).
+4. Follow the starter code from top to bottom and read the comments that explain the different parts of the code. It will also guide you to make changes or add code to fix the robot.
+5. Click the **Initialize Program** button, which will turn into a **Run Program** button. Then click the **Run Program** button to start the robot.
+
+If you get stuck or want to see a working example, you can reference the [Lesson2_encoder_based_the_solution.java](./Lesson2_encoder_based_the_solution.java) file.
 
 ---
 
