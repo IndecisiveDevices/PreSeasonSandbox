@@ -23,8 +23,8 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
  * position to zero when you would expect it to on a "real" FTC robot.
  */
 
-@TeleOp(name = "Lesson2_encoder_based_starter", group = "Tutorial")
-public class Lesson2_encoder_based_starter extends LinearOpMode {
+@TeleOp(name = "Lesson2_encoder_based_the_solution", group = "Tutorial")
+public class Lesson2_encoder_based_the_solution extends LinearOpMode {
     // create DcMotor objects
     private DcMotor frontRight;
     private DcMotor frontLeft;
@@ -64,7 +64,7 @@ public class Lesson2_encoder_based_starter extends LinearOpMode {
         frontLeft.setTargetPosition(frontLeft.getCurrentPosition() + 4700);
 
         // define variable for easier programming
-        int on = 0.9;
+        double on = 0.9;
 
         waitForStart();
 

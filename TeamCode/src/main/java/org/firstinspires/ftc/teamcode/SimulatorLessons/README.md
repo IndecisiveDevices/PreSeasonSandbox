@@ -4,6 +4,12 @@ This page references a series of simulation levels designed and presented by the
 
 VRS Robot Simulator Beginner Lessons Website: <https://www.vrobotsim.online/levelselector.html>
 
+## Recommended Videos Before You Start
+
+- [Installing Android Studio for FTC Projects](https://www.youtube.com/watch?v=_ZIYtNadJBo&list=PLi_pL-OkfRBp4E0PaHXd5nzDY9xrC9k3J&index=6) -
+The VRS Simulator allows the student to modify code directly in their simulator. However, the online editor doesn't seem to have type hints (auto-complete suggestions) that many programmers find helpful. Because of this, I highly recommend installing Android Studio.
+- [Learn Java for Robotics](https://www.youtube.com/watch?v=F24X8Ut83os&list=PLi_pL-OkfRBp4E0PaHXd5nzDY9xrC9k3J&index=5) - This is a good primer for students to understand some of the basic constructs and features of Java programming in the context of FTC Robotics. Students won't have access to a real controller or bot, however they can still practice the code exercises. And if they want to test their code, they could copy and paste their code directly into one of the VRS Simulator lessons to see how it behaves.
+
 ## 📚 Level Breakdown
 
 - **Level 1**: Drive forward and raise a flag.

@@ -47,7 +47,7 @@ public class Lesson1_starter_code extends LinearOpMode {
             // an example of setting the power of the front right motor to 1. But we 
             // have 3 more motors to set power to. Can you set the power of the other 3 motors?
             frontRight.setPower(1);
-            // ADD CODE CHANGES BELOW HERE
+            // ADD CODE CHANGES BELOW HERE - 3 more motors need to be set to power 1
 
             // telemetry data is data that gets displayed in terminal. 
             telemetry.addData("Driving", "Forward");
@@ -57,7 +57,7 @@ public class Lesson1_starter_code extends LinearOpMode {
             // to reach the flag? The time is in milliseconds. 1000 milliseconds = 1 second.
             // the sleep command will make the robot drive for the amount of time you set. It's set to half a second now.
             // Can you change the time to make the robot reach the flag?
-            sleep(500);  // UPDATE THIS VALUE. I
+            sleep(500);  // UPDATE THIS VALUE 
 
             // stop car
             // Remember how we set the power of the motors to 1 to make the robot move? How do you think we can make the robot stop?
