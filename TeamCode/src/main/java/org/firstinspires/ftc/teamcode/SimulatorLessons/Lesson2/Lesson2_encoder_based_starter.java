@@ -139,6 +139,7 @@ public class Lesson2_encoder_based_starter extends LinearOpMode {
             // FIX THE CODE BELOW
             while ( REPLACE_ME < REPLACE_ME) {
                 // ADD CODE BELOW HERE
+                
             }
 
             // stop car
