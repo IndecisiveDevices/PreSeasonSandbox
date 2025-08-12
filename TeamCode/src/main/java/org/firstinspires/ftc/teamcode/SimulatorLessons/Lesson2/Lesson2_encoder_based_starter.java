@@ -136,11 +136,14 @@ public class Lesson2_encoder_based_starter extends LinearOpMode {
             // loop until target position
             // remember that "while loop" we used earlier? We can use it again here to move the robot forward.
             // See if you can add the code to move the robot forward until it reaches the flag.
-            // FIX THE CODE BELOW
+            // UNCOMMENT AND FIX THE CODE BELOW
+
+            /** DELETE THIS LINE TO UNCOMMENT CODE
             while ( REPLACE_ME < REPLACE_ME) {
                 // ADD CODE BELOW HERE
-                
+
             }
+            DELETE THIS LINE TO UNCOMMENT CODE */
 
             // stop car
             frontRight.setPower(0);

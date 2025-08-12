@@ -1,6 +1,12 @@
 # 🤖 Lesson 2: Making Your Robot Move
 
-Welcome to Lesson 2! In this activity, you'll learn two cool ways to make your robot drive on its own—like a self-driving car!
+Welcome to Lesson 2! In this activity, you'll learn two cool ways to make your robot drive on its own—like a self-driving car! Lesson 2 of the VRS simulator has students navigate an "L" shaped course to reach the flag. This means students will need to make the robot
+
+1. Move foward until they reach the end of the first leg.
+2. Turn to face the flag
+3. Move fowrd until they reach the flag.
+
+Furthermore, this lesson provides two approaches to meet the same goal...with one that introduces the concept of **encoders**.
 
 ---
 
@@ -21,13 +27,18 @@ Begin with the **time-based** code. This is the easiest way to get your robot mo
 
 - You tell the robot to drive for a certain number of seconds.
 - It moves forward, then stops when the time is up.
+- Tell your robot to turn towards the flag for a number of milliseconds
+- It turns then stops when the time is up.
+- Tell the robot to drive for a certain number of seconds
+- It moves forward, then stops when the time is up.
 
-🕒 Example: “Drive forward for 2 seconds.”
+1. Go to the [VRS simulator](https://www.vrobotsim.online/levelselector.html) and open **Level 2**.
+2. Click **On Bot Java** to open the code editor. (see top left arrow in image below)
+3. Copy and paste the [Lesson2_time_based_starter.java](./Lesson2_time_based_starter.java) by deleting the code in the VRS coding window first, then pasting the starter code. (see image below).
+4. Follow the starter code from top to bottom and read the comments that explain the different parts of the code. It will also guide you to make changes or add code to fix the robot.
+5. Click the **Initialize Program** button, which will turn into a **Run Program** button. Then click the **Run Program** button to start the robot.
 
-### Try these files
-
-- `Lesson2_time_based_starter.java`
-- `Lesson2_time_based_the_solution.java`
+If you get stuck or want to see a working example, you can reference the [Lesson2_time_based_the_solution.java](./Lesson2_time_based_the_solution.java) file.
 
 ---
 

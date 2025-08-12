@@ -38,7 +38,7 @@ It’s like teaching your robot to take a few steps forward!
 
 1. Go to the [VRS simulator](https://www.vrobotsim.online/level1.html) and open **Level 1**.
 2. Click **On Bot Java** to open the code editor. (see top left arrow in image below)
-3. Copy and paste the [Lesson1_starter_code.java](./Lesson1_starter_code.javaLesson1_starter_code.java) by deleting the code in the VRS coding window first, then pasting the starter code. (see image below).
+3. Copy and paste the [Lesson1_starter_code.java](./Lesson1_starter_code.java) by deleting the code in the VRS coding window first, then pasting the starter code. (see image below).
 4. Follow the starter code from top to bottom and read the comments that explain the different parts of the code. It will also guide you to make changes or add code to fix the robot.
 5. Click the **Initialize Program** button, which will turn into a **Run Program** button. Then click the **Run Program** button to start the robot.
 
