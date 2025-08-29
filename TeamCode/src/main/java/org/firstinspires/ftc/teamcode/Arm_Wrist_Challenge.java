@@ -22,6 +22,7 @@
 
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.CRServo;
@@ -65,9 +66,10 @@ import org.firstinspires.ftc.robotcore.external.navigation.CurrentUnit;
  * The intake wheels are powered by a goBILDA Speed Servo (2000-0025-0003) in Continuous Rotation mode.
  */
 
-@TeleOp(name = "FTC Fix This", group = "Robot")
-// @Disabled
-public class Fix_this extends LinearOpMode {
+
+@TeleOp(name = "FTC Starter (INTO THE DEEP) ", group = "Robot")
+@Disabled
+public class Arm_Wrist_Challenge extends LinearOpMode {
 
     /* Declare OpMode members. */
     public DcMotor  leftDrive   = null; //the left drivetrain motor
@@ -263,47 +265,7 @@ public class Fix_this extends LinearOpMode {
             it folds out the wrist to make sure it is in the correct orientation to intake, and it
             turns the intake on to the COLLECT mode.*/
 
-            // Add Code Fix Start: Add 2 new conditions
-            // The two If/Else conditions need to be included at the
-            // beginning of the If/Else "chain"
-
-            // If right bumper is pressed
-            // - set the arm position to "collect"
-            // - fold out the wrist to "fold out"
-            // - turn on the intake to "collect"
-            // ADD CODE HERE
-
-            // If left bumper is pressed
-            // - set the arm position to "clear barrier"
-            // ADD CODE HERE
-
-            if (gamepad1.y) {
-                /* This is the correct height to score the sample in the LOW BASKET */
-                armPosition = ARM_SCORE_SAMPLE_IN_LOW;
-            } else if (gamepad1.dpad_up) {
-                /*
-                 * This turns off the intake, folds in the wrist, and moves the arm
-                 * back to folded inside the robot. This is also the starting configuration
-                 */
-                armPosition = ARM_COLLAPSED_INTO_ROBOT;
-                intake.setPower(INTAKE_OFF);
-                wrist.setPosition(WRIST_FOLDED_IN);
-            } else if (gamepad1.dpad_right) {
-                /* This is the correct height to score SPECIMEN on the HIGH CHAMBER */
-                armPosition = ARM_SCORE_SPECIMEN;
-                wrist.setPosition(WRIST_FOLDED_IN);
-            } else if (gamepad1.dpad_left) {
-                /* This sets the arm to vertical to hook onto the LOW RUNG for hanging */
-                armPosition = ARM_ATTACH_HANGING_HOOK;
-                intake.setPower(INTAKE_OFF);
-                wrist.setPosition(WRIST_FOLDED_IN);
-            } else if (gamepad1.dpad_down) {
-                /* this moves the arm down to lift the robot up once it has been hooked */
-                armPosition = ARM_WINCH_ROBOT;
-                intake.setPower(INTAKE_OFF);
-                wrist.setPosition(WRIST_FOLDED_IN);
-            }
-
+            // ADD NEW CODE BELOW HERE.
 
             /* Here we create a "fudge factor" for the arm position.
             This allows you to adjust (or "fudge") the arm position slightly with the gamepad triggers.
@@ -348,7 +310,6 @@ public class Fix_this extends LinearOpMode {
             if (((DcMotorEx) armMotor).isOverCurrent()){
                 telemetry.addLine("MOTOR EXCEEDED CURRENT LIMIT!");
             }
-
 
             /* send telemetry to the driver of the arm's current position and target position */
             telemetry.addData("armTarget: ", armMotor.getTargetPosition());

@@ -12,8 +12,8 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
  * position to zero when you would expect it to on a "real" FTC robot.
  */
 
-@TeleOp(name = "Lesson3_strafe_the_solution", group = "Tutorial")
-public class Lesson3_strafe_the_solution extends LinearOpMode {
+@TeleOp(name = "Lesson3_strafe_starter", group = "Tutorial")
+public class Lesson3_strafe_starter extends LinearOpMode {
     // create DcMotor objects
     private DcMotor frontRight;
     private DcMotor frontLeft;
