@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DistanceSensor;
 
-public class MyFIRSTJavaOpMode_5L_Functions extends LinearOpMode {
+public class MyFIRSTJavaOpMode_5L_Method_Single extends LinearOpMode {
     DcMotor motorLeft;
     DcMotor motorRight;
     DcMotor frontLeft;
@@ -30,7 +30,7 @@ public class MyFIRSTJavaOpMode_5L_Functions extends LinearOpMode {
         
         // Put run blocks here. 
         
-        // First, set the left motor to the reverse directoin
+        // First, set the left motor to the reverse direction
         // since it is installed on the robot the opposite of the
         // right motor. This way we don't have to remember
         // to always use an inverse value for the left motor to get
@@ -38,34 +38,26 @@ public class MyFIRSTJavaOpMode_5L_Functions extends LinearOpMode {
         motorLeft.setDirection(DcMotor.Direction.REVERSE);
 
         // Move Forward to the lightning bolt
-        moveForward(1, 1100);
+        moveIt(1, 1, 1.1);
 
         // turn towards the rubber duck
-        turnLeft(0.35, 1350);
+        moveIt(-0.35, 0.35, 1.35);
 
         // Move forward to the rubber duck
-        moveForward(1, 700);
+        moveIt(1, 1, 0.7);
 
         // Back up until it reaches the flag
-        moveForward(-1, 1500);
+        moveIt(-1, -1, 1.5);
     }
 
-    private void moveForward(double speed, int milliseconds) {
-        motorLeft.setPower(speed);
-        motorRight.setPower(speed);
-        sleep(milliseconds);
-        stopAllMotors();
-    }
+    private void moveIt(double leftSpeed, double rightSpeed, double seconds) {
+        motorLeft.setPower(leftSpeed);
+        motorRight.setPower(rightSpeed);
+        sleep((long) (seconds * 1000));
 
-    private void turnLeft(double power, int milliseconds) {
-        motorRight.setPower(power);
-        motorLeft.setPower(-power);
-        sleep(milliseconds);
-        stopAllMotors();
-    }
-
-    public void stopAllMotors() {
         motorLeft.setPower(0);
         motorRight.setPower(0);
+        frontLeft.setPower(0);
+        frontRight.setPower(0);
     }
 }

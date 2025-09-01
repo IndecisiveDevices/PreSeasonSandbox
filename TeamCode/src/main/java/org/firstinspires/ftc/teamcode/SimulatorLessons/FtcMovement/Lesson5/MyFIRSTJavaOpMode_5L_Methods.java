@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DistanceSensor;
 
-public class MyFIRSTJavaOpMode_5L_Functions_Fewer extends LinearOpMode {
+public class MyFIRSTJavaOpMode_5L_Methods extends LinearOpMode {
     DcMotor motorLeft;
     DcMotor motorRight;
     DcMotor frontLeft;
@@ -30,7 +30,7 @@ public class MyFIRSTJavaOpMode_5L_Functions_Fewer extends LinearOpMode {
         
         // Put run blocks here. 
         
-        // First, set the left motor to the reverse direction
+        // First, set the left motor to the reverse directoin
         // since it is installed on the robot the opposite of the
         // right motor. This way we don't have to remember
         // to always use an inverse value for the left motor to get
@@ -38,26 +38,34 @@ public class MyFIRSTJavaOpMode_5L_Functions_Fewer extends LinearOpMode {
         motorLeft.setDirection(DcMotor.Direction.REVERSE);
 
         // Move Forward to the lightning bolt
-        moveIt(1, 1, 1.1);
+        moveForward(1, 1100);
 
         // turn towards the rubber duck
-        moveIt(-0.35, 0.35, 1.35);
+        turnLeft(0.35, 1350);
 
         // Move forward to the rubber duck
-        moveIt(1, 1, 0.7);
+        moveForward(1, 700);
 
         // Back up until it reaches the flag
-        moveIt(-1, -1, 1.5);
+        moveForward(-1, 1500);
     }
 
-    private void moveIt(double leftSpeed, double rightSpeed, double seconds) {
-        motorLeft.setPower(leftSpeed);
-        motorRight.setPower(rightSpeed);
-        sleep((long) (seconds * 1000));
+    private void moveForward(double speed, int milliseconds) {
+        motorLeft.setPower(speed);
+        motorRight.setPower(speed);
+        sleep(milliseconds);
+        stopAllMotors();
+    }
 
+    private void turnLeft(double power, int milliseconds) {
+        motorRight.setPower(power);
+        motorLeft.setPower(-power);
+        sleep(milliseconds);
+        stopAllMotors();
+    }
+
+    public void stopAllMotors() {
         motorLeft.setPower(0);
         motorRight.setPower(0);
-        frontLeft.setPower(0);
-        frontRight.setPower(0);
     }
 }
