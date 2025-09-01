@@ -1,5 +1,5 @@
 
-package org.firstinspires.ftc.teamcode.SimulatorLessons.Lesson5L;
+package org.firstinspires.ftc.teamcode.SimulatorLessons.FtcMovement.Lesson5;
 
 import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
