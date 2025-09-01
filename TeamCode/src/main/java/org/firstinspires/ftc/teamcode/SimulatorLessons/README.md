@@ -1,73 +1,60 @@
-# Overview
+# 🤖 Welcome to FTC Sim – Your Robot’s New Playground
 
-This page references a series of simulation levels designed and presented by the VRS to teach and test robotics programming skills. I’ve only checked out some of their lessons, but their simulator has some cool features to explore.
+### 🚀 What’s This Repo?
 
-VRS Robot Simulator Beginner Lessons Website: <https://www.vrobotsim.online/levelselector.html>
+This is your launchpad for learning how to program robots using the **FTC Sim** online simulator. Whether you’re just starting out or already making your robot moonwalk, this repo has everything you need to level up your skills.
 
-## Recommended Videos Before You Start
-
-- [Installing Android Studio for FTC Projects](https://www.youtube.com/watch?v=_ZIYtNadJBo&list=PLi_pL-OkfRBp4E0PaHXd5nzDY9xrC9k3J&index=6) -
-The VRS Simulator allows the student to modify code directly in their simulator. However, the online editor doesn't seem to have type hints (auto-complete suggestions) that many programmers find helpful. Because of this, I highly recommend installing Android Studio.
-- [Learn Java for Robotics](https://www.youtube.com/watch?v=F24X8Ut83os&list=PLi_pL-OkfRBp4E0PaHXd5nzDY9xrC9k3J&index=5) - This is a good primer for students to understand some of the basic constructs and features of Java programming in the context of FTC Robotics. Students won't have access to a real controller or bot, however they can still practice the code exercises. And if they want to test their code, they could copy and paste their code directly into one of the VRS Simulator lessons to see how it behaves.
-
-## 📚 Level Breakdown
-
-- **Level 1**: Drive forward and raise a flag.
-- **Level 2**: Drive, turn, strafe; introduces encoders and variables.
-- **Level 3**: Navigate turns and practice strafing.
-- **Level 4**: Drive forward, shoot, and reload rings.
-- **Level 5**: Shoot red and blue tubes.
-- **Level 6**: Drive forward and stop on a line using a color sensor.
-
-## Simulator Lesson Code
-
-The simulator lesson code directly from the VRS simulator isn’t always well formatted or easy to get to. In addition, the code it starts with isn’t helpful. Because of this, we are in the process of copying VRS Simulator solutions code to this repository, as well as creating a code lesson template for the students start with.  
-
-To get to the lesson code templates and solutions from the Indecisive Devices PreSeasonSandbox GitHub code repository, go to <https://github.com/IndecisiveDevices/PreSeasonSandbox/tree/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons>
-
-If your student is making good progress and I don’t have the starting template and solution in our GitHub repository, you can get to the VRS provided solution by clicking the “Code” button at the bottom right of the simulator screen (see bottom most screenshot for example).
-
-# 🚀 VRS Simulator Guide
-
-Follow these steps to complete Level 1 using OnBot Java and the Indecisive Devices starter code. The instructions here describe steps for Level 1, however students should follow the same basic steps for the remaining lessons.
+We’ve recently switched to FTC Sim for a smoother, more reliable experience. It’s intuitive, fun, and packed with built-in tutorials to guide you every step of the way.
 
 ---
 
-## 🧭 Step-by-Step Instructions
+### 🧭 Getting Started with FTC Sim
 
-### 1. Open the Simulator
+1. Go to [FTC Sim](https://ftcsim.org/#frontpageCourses).
+2. Click the **hamburger menu** (yes, it’s called that 🍔) in the top left.
+3. Select **Login** and sign up or log in.
+4. Choose your course: **FTC Movement** or **FTC Sensors**.
+5. Follow the built-in tutorials—they’re like cheat codes for your brain.
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-Go to [VRS Simulator Level 1](https://www.vrobotsim.online/level1.html).
+> 💡 **Pro Tip**: Start with [FTC Movement](https://github.com/IndecisiveDevices/PreSeasonSandbox/blob/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons/FtcMovement/readme.md). It teaches your robot how to move, which is kind of important if you want it to *get to* the thing it’s supposed to sense. Once you’ve mastered movement, jump into [FTC Sensors](https://github.com/IndecisiveDevices/PreSeasonSandbox/blob/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons/FtcSensors/readme.md) to give your robot some superpowers.
 
-### 2. Launch OnBot Java
+---
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-Click the **On Bot Java** button at the top of the simulator window to open the code editor.
+### 🛠 Programming Like a Pro
 
-### 3. Paste Starter Code
+- Start with **Block programming**—drag, drop, and make your robot move.
+- Then click **OnBot Java** to convert your blocks into real Java code.
+- Select “Yes” when prompted to overwrite.
+- Tinker with the Java! Change speed, direction, sleep time—go wild (but not too wild).
+- Just don’t mess with the class name `MyFIRSTJavaOpMode`. That line is sacred.
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-In the code window, paste the starter code from the [Lesson1 folder in the Indecisive Devices GitHub repository](https://github.com/IndecisiveDevices/PreSeasonSandbox/tree/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons/Lesson1).
+---
 
-### 4. Update the Code
+### 📁 What’s Inside This Repo?
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-    Make the following updates:
-&nbsp;&nbsp;&nbsp;&nbsp;
+This repo is organized into two main folders:
 
-- Initialize the back motors using the hardware map.
-- Set the direction of the back motors.
-- Set power to all four motors so the robot drives forward.
-- Bonus challenge: Can you make the robot spin in a circle for 4 seconds after reaching the flag?
+- 🧭 [**FtcMovement**](https://github.com/IndecisiveDevices/PreSeasonSandbox/blob/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons/FtcMovement/readme.md): Teaches your robot how to move like it’s got somewhere to be.
+- 🕵️‍♂️ [**FtcSensors**](https://github.com/IndecisiveDevices/PreSeasonSandbox/blob/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons/FtcSensors/readme.md): Gives your robot the ability to *sense* things—colors, distances, and more.
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-*Hint*: Look for comments like: `// ADD CODE CHANGES BELOW HERE`
+Each folder contains:
 
-### 5. ▶️ Run Your Program
+- Starter code
+- Java solutions (starting with Course 5 and up)
+- Templates to help you build your own robot brain
 
-- Click **Initialize Program** in the simulator.
-- Once it changes to **Run Program**, click that too.
-- Your robot should drive forward and raise the flag.
+Coach is racing to upload solutions before you get there. Can you beat Coach to the finish line?
 
-![Lesson 1 Screenshot](VRS_Screenshot.png)
+---
+
+### 💬 Need Help?
+
+This isn’t required homework—it’s a chance to explore, experiment, and have fun. If you’re stuck, confused, or just want to show off your robot’s sweet moves, reach out to Coach via the team website or email.
+
+Whether you’re a coding wizard or just figuring out which way is “forward,” we’ll help you find the right tools and resources to match your style.
+
+---
+
+### 🎉 Final Thought
+
+You’re not just programming a robot. You’re building problem-solving superpowers. So buckle up, fire up FTC Sim, and let’s make those bots dance!
