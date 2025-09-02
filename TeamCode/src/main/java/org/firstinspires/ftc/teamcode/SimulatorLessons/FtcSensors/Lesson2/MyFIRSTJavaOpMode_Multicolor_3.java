@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DistanceSensor;
 
-public class MyFIRSTJavaOpMode_Multicolor extends LinearOpMode {
+public class MyFIRSTJavaOpMode_Multicolor_3 extends LinearOpMode {
     DcMotor motorLeft;
     DcMotor motorRight;
     DcMotor frontLeft;
@@ -36,41 +36,56 @@ public class MyFIRSTJavaOpMode_Multicolor extends LinearOpMode {
         motorLeft.setDirection(DcMotor.Direction.REVERSE);
 
         // Move Forward to the lightning bolt
-        moveIt(0.2, 0.2, 2.3);
+        moveForward(0.2, 2.3);
         
         telemetry.addData("Red Value", color1.red());
         telemetry.addData("Blue Value", color1.blue());
         telemetry.update();
         
-        if (color1.red() == 255) {
-            // turn left towards open gate
-            moveIt(-0.5, 0.5, 1);
-            // move forword
-            moveIt(0.5, 0.5, 0.6);
-            // wide right "U" turn
-            moveIt(0.6, 0.08, 3.75);
-            // move forword
-            moveIt(0.6, 0.6, 1);
-            // wide left turn until flag
-            moveIt(0.08, 0.6, 2.5);
-        } else if (color1.blue() == 255) {
-            // turn right towards open gate
-            moveIt(0.5, -0.5, 1);
-            // move forword
-            moveIt(0.5, 0.5, 0.6);
-            // wide left "U" turn
-            moveIt(0.08, 0.6, 3.75);
-            // move forword
-            moveIt(0.6, 0.6, 1);
-            // wide right turn until flag
-            moveIt(0.6, 0.08, 2.5);
-        }
-        
+        // In this solution, I decided to make the "red" path the default path through the maze.
+        // Knowing that the blue path is just a mirror opposite of the red path, I can use a boolean
+        // variable to switch the left and right motor speeds if the color sensor tells me the color 
+        // is not red. We assume it is blue if it is not red.
+        boolean switchMotors = color1.red() != 255;
+
+        // turn left towards open gate
+        faceOpenGate(switchMotors);
+        // move forword
+        moveForward(0.5, 0.6);
+        // wide "U" turn through the gate
+        wideUTurnThroughGate(switchMotors);
+        // move forword
+        moveForward(0.6, 1);
+        // wide turn until flag
+        wideTurnToFlag(switchMotors);
+                
     }
 
-    private void moveIt(double leftSpeed, double rightSpeed, double seconds) {
-        motorLeft.setPower(leftSpeed);
-        motorRight.setPower(rightSpeed);
+    private void wideTurnToFlag(boolean switchMotors) {
+        moveIt(0.08, 0.6, 2.5, switchMotors);
+    }
+
+    private void wideUTurnThroughGate(boolean switchMotors) {
+        moveIt(0.6, 0.08, 3.75, switchMotors);
+    }   
+
+    private void faceOpenGate(boolean switchMotors) {
+        moveIt(-0.5, 0.5, 1, switchMotors);
+    }
+
+    private void moveForward(double speed, double seconds) {
+        moveIt(speed, speed, seconds, false);
+    }
+
+    private void moveIt(double leftSpeed, double rightSpeed, double seconds, boolean switchMotors) {
+        if (switchMotors) {
+            motorLeft.setPower(rightSpeed);
+            motorRight.setPower(leftSpeed);
+        } else {
+            motorLeft.setPower(leftSpeed);
+            motorRight.setPower(rightSpeed);
+        }
+        
         sleep((long) (seconds * 1000));
 
         motorLeft.setPower(0);
