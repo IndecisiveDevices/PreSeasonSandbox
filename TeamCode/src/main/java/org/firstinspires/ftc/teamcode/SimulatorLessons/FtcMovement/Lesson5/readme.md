@@ -46,7 +46,7 @@ So while generic methods are powerful, they can be confusing if the name doesn�
 
 For this T-shaped maze, the number of lines between the three solutions isn’t wildly different. But what happens when the maze gets bigger? Let’s play a game of “What If…”
 
-| Maze Scenario | Description | MethodNone | MethodBasic | MethodGeneric |
+| Maze Scenario | Description | MyFIRSTJavaOpMode 5L | MyFIRSTJavaOpMode 5L_Methods | MyFIRSTJavaOpMode 5L_Methods_Single |
 |---------------|-------------|------------|-------------|----------------|
 | 🔹 T Maze (Lesson 5) | 3 segments + 2 turns | 43 lines | 41 lines | 39 lines |
 | 🟦 Square Maze | 4 straight segments + 4 turns | ~60 lines | ~46 lines | ~36 lines |
