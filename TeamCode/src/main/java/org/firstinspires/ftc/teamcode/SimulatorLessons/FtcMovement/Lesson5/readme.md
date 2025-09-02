@@ -36,7 +36,7 @@ Now imagine someone else has to read your code (like your teammate or future you
 
 Let’s talk naming. A method called `moveIt()` sounds cool, but what does it *actually* do? Move forward? Turn? Do a backflip?
 
-If you’re reading code and see `moveIt(500, 0.5, true)`, you might be like, “Uhh… what’s happening here?” But if you see `moveForward(500)` or `turnLeft(500)`, it’s instantly clear.
+If you’re reading code and see `moveIt(-0.5, 0.5, 1.35)`, you might be like, “Uhh… what’s happening here?” But if you see `moveForward(1, 1100)` or `turnLeft(0.35, 1350)`, it’s instantly clear what is supposed to happen.
 
 So while generic methods are powerful, they can be confusing if the name doesn’t tell the story. Think of method names like labels on buttons—make them obvious so anyone can press them without blowing up the robot.
 
