@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.SimulatorLessons.Strafing;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -12,8 +12,8 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
  * position to zero when you would expect it to on a "real" FTC robot.
  */
 
-@TeleOp(name = "Lesson3_strafe_the_solution", group = "Tutorial")
-public class Lesson3_strafe_the_solution extends LinearOpMode {
+@TeleOp(name = "Lesson3_strafe_starter", group = "Tutorial")
+public class Lesson3_strafe_starter extends LinearOpMode {
     // create DcMotor objects
     private DcMotor frontRight;
     private DcMotor frontLeft;
@@ -36,13 +36,21 @@ public class Lesson3_strafe_the_solution extends LinearOpMode {
 
         // when started
         if (opModeIsActive()) {
+            // This is different. I changed moveForward() to moveStraight() to make it more "generic".
+            // It can now move forward or backward. Take a look at the method definition below to see how it works.
             moveStraight(4000, frontRight, frontLeft, backRight, backLeft);
             sleepSec(1);
 
+            // We need to strafe left. But the robot isn't moving. Go to the function definition
+            // and fix it.
             strafeLeft(3500, frontRight, frontLeft, backRight, backLeft);
             sleepSec(1);
 
-            moveStraight(-6000, frontRight, frontLeft, backRight, backLeft);
+            // We need to move the robot towards the flag.
+            // See if you can figure out how to do this using the moveStraight() method.
+            // Hint: giving the moveStraight() method a positive distance will move it forward.
+            // ADD CODE BELOW
+
         }
     }
 
@@ -51,10 +59,24 @@ public class Lesson3_strafe_the_solution extends LinearOpMode {
     }
 
     /**
-     * Moves the robot forward for a specified distance using encoder counts.
+     * Moves the robot forward for a specified distance using encoder counts. 
      * Note: Normally, we wouldn't need to pass in the motor objects, but the simulator seems
      * to have ANOTHER BUG accessing the motor object properties in the class object.
      * But, we can work around this by having the caller give us the motor objects.
+     */
+    /**
+     * Moves the robot straight for a specified distance using encoder counts.
+     * This method can be used to move forward or backward by passing a positive or negative distance
+     * respectively. 
+     * 
+     * Note: Normally, we wouldn't need to pass in the motor objects, but the simulator seems
+     * to have ANOTHER BUG accessing the motor object properties in the class object.
+     * But, we can work around this by having the caller give us the motor objects.
+     * @param distanceTicks
+     * @param frontRight - front right motor
+     * @param frontLeft - front left motor
+     * @param backRight - back right motor
+     * @param backLeft - back left motor
      */
     private void moveStraight(int distanceTicks, DcMotor frontRight, DcMotor frontLeft, DcMotor backRight, DcMotor backLeft) {
         double power = 0.5;
@@ -69,7 +91,7 @@ public class Lesson3_strafe_the_solution extends LinearOpMode {
         // - If the power is negative, we're moving backwards so we need to check if the current position is greater than the target
         while (
                 (power > 0 && frontLeft.getCurrentPosition() < frontLeft.getTargetPosition()) ||
-                        (power < 0 && frontLeft.getCurrentPosition() > frontLeft.getTargetPosition())
+                (power < 0 && frontLeft.getCurrentPosition() > frontLeft.getTargetPosition())
         ) {
             frontRight.setPower(power);
             frontLeft.setPower(power);
@@ -108,13 +130,11 @@ public class Lesson3_strafe_the_solution extends LinearOpMode {
      */
     private void strafeLeft(int milliseconds, DcMotor frontRight, DcMotor frontLeft, DcMotor backRight, DcMotor backLeft) {
         double turnPower = 0.5;
-        // Motors spinning "inwards" towards the left side of the robot
-        frontLeft.setPower(-turnPower); // ↓
-        backLeft.setPower(turnPower);   // ↑
+        // Set 2 motors spinning "inwards" towards the left side of the robot
+        // ADD CODE BELOW
         
-        // Motors spinning "outwards" away from the left side of the robot
-        frontRight.setPower(turnPower); // ↑
-        backRight.setPower(-turnPower); // ↓
+        // Set 2 other motors spinning "outwards" away from the left side of the robot
+        // ADD CODE BELOW
 
         sleep(milliseconds);
         stopAllMotors(frontRight, frontLeft, backRight, backLeft);
