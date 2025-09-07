@@ -26,7 +26,7 @@ Check out the [FTC Login and Basic Info PDF](https://github.com/IndecisiveDevice
 4. Choose your course: **FTC Movement** or **FTC Sensors**.
 5. Follow the built-in tutorials—they’re like cheat codes for your brain.
 
-> 💡 **Pro Tip**: Start with [FTC Movement](https://github.com/IndecisiveDevices/PreSeasonSandbox/blob/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons/FtcMovement/readme.md). It teaches your robot how to move, which is kind of important if you want it to *get to* the thing it’s supposed to sense. Once you’ve mastered movement, jump into [FTC Sensors](https://github.com/IndecisiveDevices/PreSeasonSandbox/blob/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons/FtcSensors/readme.md) to give your robot some superpowers.
+> 💡 **Tip**: Start with [FTC Movement](https://github.com/IndecisiveDevices/PreSeasonSandbox/blob/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons/FtcMovement/readme.md). It teaches your robot how to move, which is kind of important if you want it to *get to* the thing it’s supposed to sense. Once you’ve mastered movement, jump into [FTC Sensors](https://github.com/IndecisiveDevices/PreSeasonSandbox/blob/main/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/SimulatorLessons/FtcSensors/readme.md) to give your robot some superpowers.
 
 ---
 
