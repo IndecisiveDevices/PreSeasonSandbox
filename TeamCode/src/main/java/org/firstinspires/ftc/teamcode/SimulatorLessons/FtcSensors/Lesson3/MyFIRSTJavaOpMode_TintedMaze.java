@@ -8,7 +8,6 @@ import com.qualcomm.robotcore.hardware.DistanceSensor;
 
 public class MyFIRSTJavaOpMode_TintedMaze extends LinearOpMode {
     DcMotor motorLeft;
-    DcMotor motorLeft;
     DcMotor motorRight;
     DcMotor frontLeft;
     DcMotor frontRight;
